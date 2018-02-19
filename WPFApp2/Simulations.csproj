@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06A504D2-94D0-4ECF-8378-F3F1401AC34E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WpfApp2</RootNamespace>
+    <AssemblyName>WpfApp2</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="brainDevelopmentControl.xaml.cs">
+      <DependentUpon>brainDevelopmentControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="simulationUserControl.xaml.cs">
+      <DependentUpon>simulationUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="dopaminePathwaysContol.xaml.cs">
+      <DependentUpon>dopaminePathwaysContol.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="healthyActivitiesControl.xaml.cs">
+      <DependentUpon>healthyActivitiesControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="normalVsOnDrugsControl.xaml.cs">
+      <DependentUpon>normalVsOnDrugsControl.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="brainDevelopmentControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="simulationUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="dopaminePathwaysContol.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="healthyActivitiesControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="normalVsOnDrugsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\amygdala.png" />
+    <Resource Include="Resources\back_button.ico" />
+    <Resource Include="Resources\brainstem.png" />
+    <Resource Include="Resources\brain_child_to_adult.jpg" />
+    <Resource Include="Resources\brain_child_to_adult_slider.jpg" />
+    <Resource Include="Resources\cerebellum.png" />
+    <Resource Include="Resources\cutoutLowerBrain.png" />
+    <Resource Include="Resources\frontalLobe.png" />
+    <Resource Include="Resources\fullTopBrain.png" />
+    <Resource Include="Resources\hippocampus.png" />
+    <Resource Include="Resources\if_Brain_Games.ico" />
+    <Resource Include="Resources\if_connect_established.ico" />
+    <Resource Include="Resources\if_connect_no.ico" />
+    <Resource Include="Resources\if_Downstairs.ico" />
+    <Resource Include="Resources\if_exit.ico" />
+    <Resource Include="Resources\if_icon-arrow-left.ico" />
+    <Resource Include="Resources\if_menu.ico" />
+    <Resource Include="Resources\if_pensil.ico" />
+    <Resource Include="Resources\if_Play.ico" />
+    <Resource Include="Resources\if_save.ico" />
+    <Resource Include="Resources\if_thumbs-up_1608950.png" />
+    <Resource Include="Resources\if_Upstairs_103047.png" />
+    <Resource Include="Resources\if_video.ico" />
+    <Resource Include="Resources\occipitalLobe.png" />
+    <Resource Include="Resources\parietalLobe.png" />
+    <Resource Include="Resources\pituitaryGland.png" />
+    <Resource Include="Resources\Poe-Center-Logo-KM.png" />
+    <Resource Include="Resources\poecentericon_HCM_icon.ico" />
+    <Resource Include="Resources\reset.ico" />
+    <Resource Include="Resources\secondBrainstem.png" />
+    <Resource Include="Resources\temporalLobe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\dopamine_pathways.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\dopamine_pathways.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\video_preview.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
