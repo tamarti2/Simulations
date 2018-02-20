@@ -22,7 +22,6 @@ namespace WpfApp2
     {
 
         private static brainDevelopmentControl _instance; //render userControl based on button pressed
-
         public brainDevelopmentControl()
         {
             InitializeComponent();
@@ -49,8 +48,9 @@ namespace WpfApp2
 
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-
+            
         }
+
     }
 }
 
