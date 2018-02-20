@@ -4,28 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfApp2"
-             mc:Ignorable="d" d:DesignWidth="300" Height="519" Width="680">
+             mc:Ignorable="d" d:DesignWidth="300" Height="500" Width="680">
     <Canvas x:Name="buttonPanel" HorizontalAlignment="Left" Height="519" VerticalAlignment="Top" Width="680">
-        <Image Canvas.Left="177" Canvas.Top ="60" Height="310" VerticalAlignment="Top" Width="337" RenderTransformOrigin="0.5,0.5" Source="Resources/brain_child_to_adult.jpg" >
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-1.261"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-3.411"/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <TextBox Text="{Binding ElementName=slValue, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Right" TextAlignment="Right" Width="25" SpellCheck.IsEnabled="True" RenderTransformOrigin="0.444,0.529" Height="20" Canvas.Left="500" Canvas.Top="368"/>
-        <Slider Maximum="5" TickFrequency="1" Height="22" Width="330" RenderTransformOrigin="0.584,5.397" Canvas.Left="174" Canvas.Top="373" ValueChanged="Slider_ValueChanged" TickPlacement="BottomRight" Cursor="Hand" AutoToolTipPlacement="TopLeft" IsSnapToTickEnabled="True" Name="slValue">
-            <Slider.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.21"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Slider.RenderTransform>
-        </Slider>
+        <Image Canvas.Left="177" Canvas.Top ="60" Height="300" VerticalAlignment="Top" Width="330" RenderTransformOrigin="0.5,0.5" Source="Resources/brain_child_to_adult.jpg" IsEnabled="false"/>
+        <TextBox x:Name="textbox" Text="{Binding ElementName=slValue, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Right" TextAlignment="Right" Width="25" Height="20" Canvas.Left="509" Canvas.Top="368"/>
+        <Slider Maximum="5" TickFrequency="1" Height="22" Width="330" RenderTransformOrigin="0.584,5.397" Canvas.Left="174" Canvas.Top="373" ValueChanged="Slider_ValueChanged" TickPlacement="BottomRight" Cursor="Hand" AutoToolTipPlacement="TopLeft" IsSnapToTickEnabled="True" Name="slValue"/>
     </Canvas>
 </UserControl>
