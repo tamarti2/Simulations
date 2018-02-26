@@ -168,6 +168,18 @@
     <Content Include="Resources\dopamine_pathways.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\gif_brain_reward_pathways.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\gif_neurons.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\gray_matter_meter.PNG" />
+    <Resource Include="Resources\gray_matter_young_adult.PNG" />
+    <Resource Include="Resources\gray_matter_late_teen.PNG" />
+    <Resource Include="Resources\gray_matter_teen.PNG" />
+    <Resource Include="Resources\gray_matter_early_teen.PNG" />
+    <Resource Include="Resources\gray_matter_5_years.PNG" />
     <Resource Include="Resources\video_preview.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

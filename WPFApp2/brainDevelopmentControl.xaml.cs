@@ -25,6 +25,10 @@ namespace WpfApp2
         public brainDevelopmentControl()
         {
             InitializeComponent();
+            Image2.Visibility = Visibility.Hidden;
+            Image3.Visibility = Visibility.Hidden;
+            Image4.Visibility = Visibility.Hidden;
+            Image5.Visibility = Visibility.Hidden;
         }
 
         public static brainDevelopmentControl Instance
@@ -48,7 +52,45 @@ namespace WpfApp2
 
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            
+
+            if (slValue.Value == 1)
+            {
+                Image2.Visibility = Visibility.Hidden;
+                Image3.Visibility = Visibility.Hidden;
+                Image4.Visibility = Visibility.Hidden;
+                Image5.Visibility = Visibility.Hidden;
+                Image1.Visibility = Visibility.Visible;
+            }
+            else if (slValue.Value == 2)
+            {
+                Image1.Visibility = Visibility.Hidden;
+                Image3.Visibility = Visibility.Hidden;
+                Image4.Visibility = Visibility.Hidden;
+                Image5.Visibility = Visibility.Hidden;
+                Image2.Visibility = Visibility.Visible;
+            } else if (slValue.Value == 3)
+            {
+                Image1.Visibility = Visibility.Hidden;
+                Image2.Visibility = Visibility.Hidden;
+                Image4.Visibility = Visibility.Hidden;
+                Image5.Visibility = Visibility.Hidden;
+                Image3.Visibility = Visibility.Visible;
+            } else if (slValue.Value == 4)
+            {
+                Image1.Visibility = Visibility.Hidden;
+                Image2.Visibility = Visibility.Hidden;
+                Image3.Visibility = Visibility.Hidden;
+                Image5.Visibility = Visibility.Hidden;
+                Image4.Visibility = Visibility.Visible;
+            } else if (slValue.Value == 5)
+            {
+                Image1.Visibility = Visibility.Hidden;
+                Image2.Visibility = Visibility.Hidden;
+                Image3.Visibility = Visibility.Hidden;
+                Image4.Visibility = Visibility.Hidden;
+                Image5.Visibility = Visibility.Visible;
+            }
+
         }
 
     }

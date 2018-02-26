@@ -24,7 +24,7 @@ namespace WpfApp2
     {
         double buttonTopValue;
 
-        public MainWindow()
+       public MainWindow()
         {
             InitializeComponent();
         }

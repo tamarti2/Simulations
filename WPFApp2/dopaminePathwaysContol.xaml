@@ -5,8 +5,32 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfApp2"
              mc:Ignorable="d" d:DesignWidth="300" Height="519" Width="680">
-    <Canvas x:Name="buttonPanel" HorizontalAlignment="Left" Height="519" VerticalAlignment="Top" Width="680">
-        <Grid Height="420" Width="628" Canvas.Left="28" Canvas.Top="55">
+    <Canvas x:Name="dopaminePathways" HorizontalAlignment="Left" Height="519" VerticalAlignment="Top" Width="680">
+
+        <MediaElement x:Name="Gif1"
+                      Source="Resources/gif_brain_reward_pathways.mp4" Canvas.Left="53" Canvas.Top="63" 
+                      IsMuted="True" IsEnabled="False" LoadedBehavior="Play" MediaOpened="Gif1_MediaOpened"
+                      Height="362" Width="557"/>
+        <MediaElement x:Name="Gif2"
+                      Source="Resources/gif_neurons.mp4" Canvas.Left="53" Canvas.Top="89" 
+                      IsMuted="True" IsEnabled="False" LoadedBehavior="Play"
+                      Height="310" Width="557"/>
+        <Button x:Name="previousButton" Click="PreviousButton_Click" Content="Previous" Width="49" Canvas.Left="53" Canvas.Top="425"/>
+        <Button x:Name="backButton" Click="NextButton_Click" Content="Next" Width="37" Canvas.Left="573" Canvas.Top="425"/>
+        <ScrollBar x:Name="sbarPosition" Canvas.Left="56" Canvas.Top="404" Width="551" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Visible" RenderTransformOrigin="0.5,0.5" Orientation="Horizontal">
+            <ScrollBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.212"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.496"/>
+                </TransformGroup>
+            </ScrollBar.RenderTransform>
+        </ScrollBar>
+        <TextBox x:Name="txtPosition" Height="20" Canvas.Left="301" TextWrapping="Wrap" Text="" Canvas.Top="425" Width="50"/>
+        <Button Click="btnSetPosition_Click" Content="Set Position" Canvas.Left="356" Canvas.Top="425" Width="72"/>
+
+        <!--<Grid Height="420" Width="628" Canvas.Left="28" Canvas.Top="55">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="347*"/>
                 <ColumnDefinition Width="281*"/>
@@ -49,6 +73,6 @@
 
             </StackPanel>
 
-        </Grid>
+        </Grid> -->
     </Canvas>
 </UserControl>
