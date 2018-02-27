@@ -8,16 +8,16 @@
     <Canvas x:Name="dopaminePathways" HorizontalAlignment="Left" Height="519" VerticalAlignment="Top" Width="680">
 
         <MediaElement x:Name="Gif1"
-                      Source="Resources/gif_brain_reward_pathways.mp4" Canvas.Left="53" Canvas.Top="63" 
-                      IsMuted="True" IsEnabled="False" LoadedBehavior="Play" MediaOpened="Gif1_MediaOpened"
-                      Height="362" Width="557"/>
-        <MediaElement x:Name="Gif2"
-                      Source="Resources/gif_neurons.mp4" Canvas.Left="53" Canvas.Top="89" 
-                      IsMuted="True" IsEnabled="False" LoadedBehavior="Play"
-                      Height="310" Width="557"/>
-        <Button x:Name="previousButton" Click="PreviousButton_Click" Content="Previous" Width="49" Canvas.Left="53" Canvas.Top="425"/>
-        <Button x:Name="backButton" Click="NextButton_Click" Content="Next" Width="37" Canvas.Left="573" Canvas.Top="425"/>
-        <ScrollBar x:Name="sbarPosition" Canvas.Left="56" Canvas.Top="404" Width="551" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Visible" RenderTransformOrigin="0.5,0.5" Orientation="Horizontal">
+                      Canvas.Left="35" Canvas.Top="23" 
+                      IsMuted="True" IsEnabled="True" LoadedBehavior="Manual" MediaEnded="Gif1_MediaEnded" MediaOpened="Gif1_MediaOpened"
+                      Height="311" Width="593"/>
+        <!-- <MediaElement x:Name="Gif2"
+                      Source="Resources/gif_neurons.mp4" Canvas.Left="53" Canvas.Top="90" 
+                      IsMuted="True" IsEnabled="True" LoadedBehavior="Play" MediaEnded="Gif2_MediaEnded" MediaOpened="Gif2_MediaOpened"
+                      Height="310" Width="557"/> -->
+        <Button x:Name="previousButton" Click="PreviousButton_Click" Content="Previous" Width="49" Canvas.Left="53" Canvas.Top="489"/>
+        <Button x:Name="nextButton" Click="NextButton_Click" Content="Next" Width="37" Canvas.Left="573" Canvas.Top="489"/>
+        <ScrollBar x:Name="sbarPosition" Canvas.Left="54" Canvas.Top="343" Width="554" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Visible" RenderTransformOrigin="0.5,0.5" Orientation="Horizontal">
             <ScrollBar.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -27,8 +27,10 @@
                 </TransformGroup>
             </ScrollBar.RenderTransform>
         </ScrollBar>
-        <TextBox x:Name="txtPosition" Height="20" Canvas.Left="301" TextWrapping="Wrap" Text="" Canvas.Top="425" Width="50"/>
-        <Button Click="btnSetPosition_Click" Content="Set Position" Canvas.Left="356" Canvas.Top="425" Width="72"/>
+        <!-- <TextBox x:Name="txtPosition" Height="20" Canvas.Left="275" TextWrapping="Wrap" Text="" Canvas.Top="451" Width="50"/>
+        <Button Click="btnSetPosition_Click" Content="Set Position" Canvas.Left="330" Canvas.Top="451" Width="72"/> -->
+        <Label x:Name="lblStatus" Content="" Canvas.Left="293" Canvas.Top="366" Width="80"/>
+        <TextBox x:Name="dopamineText" Height="73" Canvas.Left="53" TextWrapping="Wrap" Text="" Canvas.Top="411" Width="557"/>
 
         <!--<Grid Height="420" Width="628" Canvas.Left="28" Canvas.Top="55">
             <Grid.ColumnDefinitions>

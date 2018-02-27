@@ -53,7 +53,7 @@ namespace WpfApp2
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
 
-            if (slValue.Value == 1)
+            if (slValue.Value == 5)
             {
                 Image2.Visibility = Visibility.Hidden;
                 Image3.Visibility = Visibility.Hidden;
@@ -61,28 +61,28 @@ namespace WpfApp2
                 Image5.Visibility = Visibility.Hidden;
                 Image1.Visibility = Visibility.Visible;
             }
-            else if (slValue.Value == 2)
+            else if (slValue.Value == 8.75)
             {
                 Image1.Visibility = Visibility.Hidden;
                 Image3.Visibility = Visibility.Hidden;
                 Image4.Visibility = Visibility.Hidden;
                 Image5.Visibility = Visibility.Hidden;
                 Image2.Visibility = Visibility.Visible;
-            } else if (slValue.Value == 3)
+            } else if (slValue.Value == 12.5)
             {
                 Image1.Visibility = Visibility.Hidden;
                 Image2.Visibility = Visibility.Hidden;
                 Image4.Visibility = Visibility.Hidden;
                 Image5.Visibility = Visibility.Hidden;
                 Image3.Visibility = Visibility.Visible;
-            } else if (slValue.Value == 4)
+            } else if (slValue.Value == 16.25)
             {
                 Image1.Visibility = Visibility.Hidden;
                 Image2.Visibility = Visibility.Hidden;
                 Image3.Visibility = Visibility.Hidden;
                 Image5.Visibility = Visibility.Hidden;
                 Image4.Visibility = Visibility.Visible;
-            } else if (slValue.Value == 5)
+            } else if (slValue.Value == 20)
             {
                 Image1.Visibility = Visibility.Hidden;
                 Image2.Visibility = Visibility.Hidden;
