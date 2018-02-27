@@ -9,7 +9,7 @@
     <Canvas x:Name="buttonPanel" HorizontalAlignment="Left" Height="519" VerticalAlignment="Top" Width="680">
         <Image Height="323" Canvas.Left="58" Canvas.Top="83" Width="218" Source="Resources/normal_brain.png"/>
         <Label Content="Normal Brain" Canvas.Left="119" Canvas.Top="57"/>
-        <Image Height="293" Canvas.Left="324" Canvas.Top="98" Width="316" Source="Resources/drug_abuser_brain.png"/>
+        <Image Height="293" Canvas.Left="324" Canvas.Top="98" Width="316" Source="Resources/drug_abuser_brain.PNG" IsHitTestVisible="True"/>
         <Label Content="Brain on Drugs" Canvas.Left="434" Canvas.Top="57"/>
         <ComboBox Canvas.Left="434" Canvas.Top="422" Width="120"/>
         <Button Content="Rehab" Canvas.Left="58" Canvas.Top="465" Width="74"/>

@@ -167,6 +167,7 @@
     </Content>
     <Resource Include="Resources\normal_brain.PNG" />
     <Resource Include="Resources\brain_benefits_exercise.jpg" />
+    <Resource Include="Resources\drug_abuser_brain.PNG" />
     <Content Include="Resources\gif_blocked_dopamine_transporters.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
