@@ -4,20 +4,20 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfApp2"
-             mc:Ignorable="d" d:DesignWidth="300" Height="519" Width="680">
-    <Canvas x:Name="dopaminePathways" HorizontalAlignment="Left" Height="519" VerticalAlignment="Top" Width="680">
+             mc:Ignorable="d" d:DesignWidth="300" Height="540" Width="680">
+    <Canvas x:Name="dopaminePathways" HorizontalAlignment="Left" Height="540" VerticalAlignment="Top" Width="680">
 
         <MediaElement x:Name="Gif1"
-                      Canvas.Left="35" Canvas.Top="23" 
+                      Canvas.Left="75" Canvas.Top="64" 
                       IsMuted="True" IsEnabled="True" LoadedBehavior="Manual" MediaEnded="Gif1_MediaEnded" MediaOpened="Gif1_MediaOpened"
-                      Height="311" Width="593"/>
+                      Height="252" Width="532"/>
         <!-- <MediaElement x:Name="Gif2"
                       Source="Resources/gif_neurons.mp4" Canvas.Left="53" Canvas.Top="90" 
                       IsMuted="True" IsEnabled="True" LoadedBehavior="Play" MediaEnded="Gif2_MediaEnded" MediaOpened="Gif2_MediaOpened"
                       Height="310" Width="557"/> -->
-        <Button x:Name="previousButton" Click="PreviousButton_Click" Content="Previous" Width="49" Canvas.Left="53" Canvas.Top="489"/>
-        <Button x:Name="nextButton" Click="NextButton_Click" Content="Next" Width="37" Canvas.Left="573" Canvas.Top="489"/>
-        <ScrollBar x:Name="sbarPosition" Canvas.Left="54" Canvas.Top="343" Width="554" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Visible" RenderTransformOrigin="0.5,0.5" Orientation="Horizontal">
+        <Button x:Name="previousButton" Click="PreviousButton_Click" Content="Previous" Width="65" Canvas.Top="188" Canvas.Left="10"/>
+        <Button x:Name="nextButton" Click="NextButton_Click" Content="Next" Width="63" Canvas.Left="607" Canvas.Top="188"/>
+        <ScrollBar x:Name="sbarPosition" Canvas.Left="102" Canvas.Top="320" Width="480" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Visible" RenderTransformOrigin="0.5,0.5" Orientation="Horizontal" Height="17">
             <ScrollBar.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -29,8 +29,23 @@
         </ScrollBar>
         <!-- <TextBox x:Name="txtPosition" Height="20" Canvas.Left="275" TextWrapping="Wrap" Text="" Canvas.Top="451" Width="50"/>
         <Button Click="btnSetPosition_Click" Content="Set Position" Canvas.Left="330" Canvas.Top="451" Width="72"/> -->
-        <Label x:Name="lblStatus" Content="" Canvas.Left="293" Canvas.Top="366" Width="80"/>
-        <TextBox x:Name="dopamineText" Height="73" Canvas.Left="53" TextWrapping="Wrap" Text="" Canvas.Top="411" Width="557"/>
+        <Label x:Name="lblStatus" Content="" Canvas.Top="336" Width="80" Canvas.Left="305"/>
+        <TextBox x:Name="dopamineText" Height="173" Canvas.Left="90" TextWrapping="Wrap" Text="" Canvas.Top="367" Width="517" FontSize="20"/>
+        <ComboBox x:Name="videoList" Text="Reward Pathways" Canvas.Left="10" Canvas.Top="10" Width="150" SelectionChanged="videoList_SelectionChanged">
+            <ComboBoxItem>Reward Pathways</ComboBoxItem>
+            <ComboBoxItem>Neurotransmitters</ComboBoxItem>
+            <ComboBoxItem>Dopamine Receptors</ComboBoxItem>
+            <ComboBoxItem>Dopamine Transporters</ComboBoxItem>
+            <ComboBoxItem>Action Potential</ComboBoxItem>
+            <ComboBoxItem>Drug Binding</ComboBoxItem>
+            <ComboBoxItem>Overstimulation</ComboBoxItem>
+            <ComboBoxItem>Tolerance</ComboBoxItem>
+            <ComboBoxItem>Increased Tolerance</ComboBoxItem>
+        </ComboBox>
+        <Label x:Name="videoLabel"  Content="" Canvas.Left="276" Canvas.Top="33" Width="135"/>
+        <Button x:Name="playButton" Content="Play" Canvas.Left="465" Canvas.Top="340" Width="75" Click="playButton_Click"/>
+        <Button x:Name="pauseButton" Content="Pause" Canvas.Left="156" Canvas.Top="340" Width="74" Click="pauseButton_Click"/>
+
 
         <!--<Grid Height="420" Width="628" Canvas.Left="28" Canvas.Top="55">
             <Grid.ColumnDefinitions>
