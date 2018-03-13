@@ -181,9 +181,17 @@
     <Content Include="bin\Debug\dopamine_pathways.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\smoker_brain.PNG" />
+    <Resource Include="Resources\non_smoker_brain.PNG" />
+    <Resource Include="Resources\non_cocaine_brain.PNG" />
+    <Resource Include="Resources\non_alcoholic_brain.PNG" />
     <Resource Include="Resources\normal_brain.PNG" />
     <Resource Include="Resources\brain_benefits_exercise.jpg" />
     <Resource Include="Resources\drug_abuser_brain.PNG" />
+    <Resource Include="Resources\alcoholic_brain.PNG" />
+    <Resource Include="Resources\cocaine_brain.PNG" />
+    <Resource Include="Resources\brain_on_meth_1month.PNG" />
+    <Resource Include="Resources\brain_on_meth_14month.PNG" />
     <Content Include="Resources\gif_blocked_dopamine_transporters.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
